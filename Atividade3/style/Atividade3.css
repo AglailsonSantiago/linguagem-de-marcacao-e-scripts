@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.navegador {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.navegador .botao-navegador, .container .menu1 .botao-navegador, .container .menu2 .botao-navegador{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.navegador .botao-navegador:hover, .container .menu1 .botao-navegador:hover, .container .menu2 .botao-navegador:hover{
+    background-color: white;
+    color: black;
+}
+
+.container{
+    display: flex;
+}
+.container .menu1{
+    flex-basis: 300px;
+    background-color: black;
+    height: 100vh;
+}
+.container .conteudo{
+    display: flex;
+    flex-grow: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+.container .conteudo img{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+.container .menu2{
+    flex-grow: 1;
+    color: white;
+    background-color: black;
+}
+.rodape{
+    background-color: rgb(16, 12, 54);
+    color: white;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 20px;
+}
