@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.navegador-top{
+    height: 40px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.navegador-top .botao, .container .menu-esquerdo .botao{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 5px 5px 10px rgba(95, 93, 93, 0.589);
+}
+
+.navegador-top .botao:hover, .container .menu-esquerdo .botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.navegador-top .navegador-icone{
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(95, 93, 93, 0.589);
+}
+
+.navegador-top .navegador-icone:hover{
+    background-color: white;
+    color: black;
+}
+
+.container{
+    display: flex;
+}
+
+.container .menu-esquerdo{
+    background-color: grey;
+    width: 350px;
+    height: 800px;
+    align-items: center;
+}
+
+.container .conteudo{
+    height: 800px;
+    width: 100%;
+}
+
+.container .conteudo .row-1{
+    display: flex;
+    height: 400px;
+}
+
+.container .conteudo .row-1 .celula-1{
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color:  blue;
+}
+.container .conteudo .row-1 .celula-1 .accordion .item{
+    display: flex;
+    height: 40px;
+    transition: height 2s;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid black;
+}
+.container .conteudo .row-1 .celula-1 .accordion .item:hover{
+    height: 240px;
+}
+.container .conteudo .row-1 .celula-1 .accordion .item .titulo{
+    height: 40px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.container .conteudo .row-1 .celula-1 .accordion .item .texto{
+    height: 200px;
+    font-size: 18px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.container .conteudo .row-1 .celula-2{
+    width: 50%;
+    height: 100%;
+    background-color: orangered;
+    justify-items: center;
+    overflow: hidden;
+}
+.container .conteudo .row-1 .celula-2:hover{
+    background-color: white;
+}
+
+.container .conteudo .row-1 .celula-2 .imagem{
+    position: relative;  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .conteudo .row-1 .celula-2 .imagem img{  
+    width: 400px;
+}
+
+.container .conteudo .row-1 .celula-2 .imagem .legenda{
+    position: absolute;  
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: white;
+}
+
+.container .conteudo .row-2{
+    display: flex;
+    height: 400px;
+}
+
+.container .conteudo .row-2 .celula-3{
+    flex-grow: 1;
+    height: 400px;
+    background-color: yellow;
+}
+
+.container .conteudo .row-2 .celula-3:hover{
+    background-color: white;
+}
+
+.container .conteudo .row-2 .celula-4{
+    flex-grow: 1;
+    height: 400px;
+    background-color: blueviolet;
+}
+
+.container .conteudo .row-2 .celula-4:hover{
+    background-color: white;
+}
+
+.container .conteudo .row-2 .celula-5{
+    flex-grow: 1;
+    height: 400px;
+    background-color: rgb(36, 36, 43);
+}
+
+.container .conteudo .row-2 .celula-5:hover{
+    background-color: white;
+}
+
+.animacao{
+    position: absolute;
+    
+    animation-name: move-animacao;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+.animacao img{
+    width: 220px;
+}
+
+@keyframes move-animacao{
+    0%{
+        left: 0%;
+        top: 5%;
+        transform: rotate(0deg);
+    }
+    25%{
+        left: 85%;
+        top: 5%;
+        transform: rotate(0deg);
+    }
+    50%{
+        left: 85%;
+        top: 85%;
+        transform: rotate(90deg);
+        transform: scaleX(-1);
+    }
+    75%{
+        left: 0%;
+        top: 85%;
+        transform: rotate(90deg);
+        transform: scaleX(-1);
+    }
+    100%{
+        left: 0%;
+        top: 5%;
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .navegador-top{
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .navegador-top .botao, .container .menu-esquerdo .botao{
+        box-shadow: none;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .menu-esquerdo{
+        width: 100%;
+        height: 400px;
+        flex-direction: column;
+    }
+    .container .conteudo{
+        flex-direction: column;
+    }
+    .container .conteudo .row-1{
+        flex-direction: column;
+    }
+    .container .conteudo .row-1 .celula-1{
+        flex-basis: initial;
+        height: 400px;
+        width: 100%;
+    }
+    .container .conteudo .row-1 .celula-2{
+        flex-basis: initial;
+        height: 400px;
+        width: 100%;
+    }
+    .container .conteudo .row-1 .celula-2 .imagem img{
+        height: 200px;
+        width: 200px;
+    }
+    .container .conteudo .row-2{
+        flex-direction: column;
+    }
+    .container .conteudo .row-2 .celula-3{
+        flex-basis: initial;
+        height: 400px;
+        width: 100%;
+    }
+    .container .conteudo .row-2 .celula-4{
+        flex-basis: initial;
+        height: 400px;
+        width: 100%;
+    }
+    
+    .container .conteudo .row-2 .celula-5{
+        flex-basis: initial;
+        height: 400px;
+        width: 100%;
+    }
+}
