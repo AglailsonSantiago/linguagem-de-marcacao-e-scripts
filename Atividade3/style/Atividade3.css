@@ -19,7 +19,7 @@ body{
     color: white;
     text-decoration: none;
     font-size: 25px;
-    padding: 30px;
+    padding: 27px;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -30,6 +30,8 @@ body{
 
 .container{
     display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 .container .menu1{
     flex-basis: 300px;
